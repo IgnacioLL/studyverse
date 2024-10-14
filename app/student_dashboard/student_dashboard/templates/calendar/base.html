@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
+    <head>
+        <meta name="description" content="Event Dashboard" />
+        <!-- Twitter meta-->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:site" content="@sajib1066" />
+        <meta property="twitter:creator" content="@sajib1066" />
+        <!-- Open Graph Meta-->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Vali Admin" />
+        <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme" />
+        <meta property="og:url" content="https://sajib1066.github.io/" />
+        <meta property="og:image" content="https://sajib1066.github.io/images/me.jpg" />
+        <meta property="og:description" content="Event Dashboard" />
+        <title>{% block title %}{% endblock title  %}</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Main CSS-->
+        <link rel="stylesheet" type="text/css" href="{% static 'calendar/css/main.css' %}" />
+        <!-- Font-icon css-->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <style>
+        .app-container {
+            position: relative;
+            top: -40px;
+            left: -225px;
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+        }
+
+        .app-content {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+    </style>
+
+        {% block extracss %}
+        {% endblock extracss %}
+        <body class="app sidebar-mini">
+            <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+            <div class="app-container">
+                <main class="app-content">
+                    <div class="app-title">
+                        {% block breadcrumb %}
+                        {% endblock breadcrumb %}
+                    </div>
+                    {% block calendar %}
+                    {% endblock calendar %}
+                </main>
+            </div>
+        </body>      
+    <script src="{% static 'calendar/js/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'calendar/js/popper.js' %}"></script>
+    <script src="{% static 'calendar/js/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'calendar/js/main.js' %}"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="{% static 'calendar/js/plugins/pace.min.js'%}"></script>
+
+    {% block extrascripts %}
+    {% endblock extrascripts %}
+</html>
+{% endblock content %}

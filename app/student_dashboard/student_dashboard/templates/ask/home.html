@@ -1,0 +1,10 @@
+{% extends 'ask/base_generic.html' %}
+{% load static %}
+
+
+{% block ask %}
+    <form action="{% url 'ask:response' %}" method="get">
+        <input type="text" name="usertext">
+        <input type="submit" value="Response">
+    </form>
+{% endblock %}

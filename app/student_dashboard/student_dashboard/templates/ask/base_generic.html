@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <style>
+        /* Add left padding to the main content */
+        main {
+            padding-left: 100px;
+        }
+        header {
+            padding-left: 100px;
+        }
+        h1 {
+            font-size: 28px;
+        }
+    </style>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <h1>Ask your question:</h1>
+    </header>
+
+    <main>
+        {% block ask %}
+        {% endblock %}
+    </main>
+
+
+</body>
+</html>
+{% endblock %}

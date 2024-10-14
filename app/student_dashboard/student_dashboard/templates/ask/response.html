@@ -1,0 +1,8 @@
+{% extends 'ask/base_generic.html' %}
+
+{% block title %}Reverse{% endblock %}
+
+{% block ask %}
+    <p>{{ reversedtext }}</p>
+    <a href="{% url 'ask:ask_home' %}">Go back</a>
+{% endblock %}

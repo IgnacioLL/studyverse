@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Add your CSS files here -->
+    <style>
+        /* Add left padding to the main content */
+        main {
+            padding-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        {% block chat %}
+        <!-- This block will be filled in by child templates -->
+        {% endblock %}
+
+    </main>
+
+    <!-- Add your JavaScript files here -->
+
+
+</body>
+</html>
+{% endblock %}

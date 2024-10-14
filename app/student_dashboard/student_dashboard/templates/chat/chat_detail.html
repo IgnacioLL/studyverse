@@ -1,0 +1,21 @@
+{% extends 'chat/base_generic.html' %}
+
+{% block chat %}
+  <h1>Chat {{ chat.name }}</h1>
+  <ul>
+    {% for message in messages %}
+      <li>
+        <strong>{{ message.author }}</strong>: {{ message.message }}
+      </li>
+    {% empty %}
+      <li>No messages in this chat.</li>
+    {% endfor %}
+  </ul>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="message" placeholder="Type your message">
+    <button type="submit">Send</button>
+  </form>
+    
+{% endblock %}

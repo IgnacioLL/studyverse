@@ -1,0 +1,10 @@
+{% extends 'ask/base_generic.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block ask %}
+    <form action="{% url 'ask:response_asignatura' asignatura_id=asignatura_id %}" method="get">
+        <input type="text" name="usertext">
+        <input type="submit" value="Response">
+    </form>
+{% endblock %}
